@@ -92,7 +92,7 @@ $Tools::Module::VERBOSE = 0;
 
 ### test 'requires' ###
 
-{   my %list = map { $_ => 1 } requires('Config');
+{   my %list = map { $_ => 1 } requires('Carp');
 
     my $flag;
     $flag++ unless delete $list{'Exporter'};

@@ -28,7 +28,7 @@ use_ok( 'Tools::Cmd' ) or diag "Cmd.pm not found.  Dying", die;
         skip "No buffers returned", 3 unless $list[2];
 
         ok( (grep /larry\s+wall/i, @{$list[2]}),    q[Out buffer filled] );
-        ok( @{$list[3]} == 0,                       q[Stdout buffer empty] );
-        ok( (grep /larry\s+wall/i, @{$list[4]}),    q[Stderr buffer filled] );
+        ok( (grep /larry\s+wall/i, @{$list[3]}),    q[Stdout buffer filled] );
+        ok( @{$list[4]} == 0,                       q[Stderr buffer empty] );
     }
 }

@@ -1,3 +1,10 @@
+Version 0.04 12/23/2002 2:56PM
+==============================
+-   Fixed I/O capturing for IPC::Run in Tools::Cmd
+-   Fixed test case for Tools::Module::requires() so it will work with 5.9
+-   Fixed test for Tools::Item since carp::shortmess() has changed in 5.8
+-   Thanks to Iain "Spoon" Truskett for catching these bugs.
+
 Version 0.03 12/23/2002 2:00PM
 ==============================
 -   Fixed a faulty test for Tools::SQL

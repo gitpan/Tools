@@ -13,7 +13,7 @@ BEGIN {
     use Exporter    ();
     use vars        qw[ @ISA $VERSION @EXPORT_OK $VERBOSE];
 
-    $VERSION    =   0.01;
+    $VERSION    =   0.02;
     $VERBOSE    =   0;
 
     @ISA        =   qw[ Exporter ];
@@ -96,12 +96,12 @@ sub run {
 
         $have_buffer++;
 
-        @cmd = ref($cmd) ? ( [ @cmd ], \*STDIN )
+         @cmd = ref($cmd) ? ( [ @cmd ] )
                          : map { /[<>|&]/
                                     ? $_
                                     : [ split / +/ ]
                                } split( /\s*([<>|&])\s*/, $cmd );
-        IPC::Run::run(@cmd, $_out_handler, $_err_handler) or $err++;
+         IPC::Run::run(@cmd, \*STDIN, $_out_handler, $_err_handler) or $err++;
 
 
     ### Next, IPC::Open3 is know to fail on Win32, but works on Un*x.
