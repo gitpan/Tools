@@ -1,5 +1,7 @@
+Version 0.03 12/23/2002 2:00PM
+==============================
+-   Fixed a faulty test for Tools::SQL
+
 Version 0.02 12/23/2002 1:55PM
 ==============================
-
--   Fixed a faulty test for Tools::SQL
 -   Fixed an ambiguous test for Tools::Item

@@ -72,7 +72,7 @@ use_ok( 'Tools::Log::Handlers'  ) or diag "Handlers.pm not found.  Dying",  die;
     }
 
     {
-        like(   $item->shortmess, qr/08_Tools-Log.t\s*(?:at)\s*line \d+/,
+        like(   $item->shortmess, qr/08_Tools-Log.t\s*(?:at)?\s*line \d+/,
                 q[Item shortmess stored]
         );
         like(   $item->longmess, qr/Tools::Log::store/s,

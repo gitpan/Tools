@@ -6,7 +6,7 @@ use Test::More tests => 1;
 
 SKIP: {
     eval "use DBI";
-    skip "Can not test Tools::SQL since you do not have DBI installed", 1 unless $@;
+    skip "Can not test Tools::SQL since you do not have DBI installed", 1 if $@;
 
     use_ok( "Tools::SQL" ) or diag q[Could not load 'Tools::SQL'.  Dying], die;
 }        
