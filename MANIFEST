@@ -1,5 +1,6 @@
 Makefile.PL
 MANIFEST
+CHANGES
 README
 lib/Tools.pm
 lib/Tools/Check.pm
